@@ -1,3 +1,2 @@
 rootProject.name = "Grad Portfolio"
 include ':app'
-include ':unityLibrary'

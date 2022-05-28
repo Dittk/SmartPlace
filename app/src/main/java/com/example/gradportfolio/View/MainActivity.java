@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void startSqlLite() {
-        helper = new SqlLiteHelper(MainActivity.this, "InternalDb.db", null, 1);
+        helper = new SqlLiteHelper(MainActivity.this, "InternalDb2.db", null, 1);
         db = helper.getWritableDatabase();
         helper.onCreate(db);
     }

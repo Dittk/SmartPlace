@@ -75,7 +75,7 @@ public class MenuSearch extends Fragment {
         mList.add(new MenuList("침대", R.drawable.menu_bed));
         mList.add(new MenuList("의자", R.drawable.menu_chair));
         mList.add(new MenuList("책상", R.drawable.menu_table));
-        mList.add(new MenuList("가구 5",R.drawable.image_textile));
+        mList.add(new MenuList("가구 5",R.drawable.image_furniture));
 
 
         searchRecyclerAdapter2.notifyDataSetChanged();

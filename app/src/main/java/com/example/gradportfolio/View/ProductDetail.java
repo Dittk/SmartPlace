@@ -18,7 +18,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.example.gradportfolio.Presenter.RecyclerAdapter;
 import com.example.gradportfolio.R;
-import com.unity3d.player.UnityPlayerActivity;
 
 import java.util.Currency;
 import java.util.Locale;
@@ -104,15 +103,16 @@ public class ProductDetail extends AppCompatActivity {
             Glide.with(Home.context).load(image4).into(imageView4);
         }
 
+        //미리보기
         Button preview = findViewById(R.id.preview_button);
 
-        preview.setOnClickListener(new View.OnClickListener() {
+       /* preview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ProductDetail.this, UnityPlayerActivity.class);
                 startActivity(intent);
             }
-        });
+        }); */
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
