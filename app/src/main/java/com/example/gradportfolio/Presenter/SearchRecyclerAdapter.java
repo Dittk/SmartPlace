@@ -12,12 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.gradportfolio.Model.Category_1;
 import com.example.gradportfolio.Model.SearchData;
 import com.example.gradportfolio.R;
 import com.example.gradportfolio.View.MenuSearch;
 import com.example.gradportfolio.View.ProductDetail;
-import com.example.gradportfolio.View.ShoppingBasket;
 
 import java.util.ArrayList;
 

@@ -91,6 +91,17 @@ public class ProductDetail extends AppCompatActivity {
             Glide.with(MenuSearch.ct).load(image3).into(imageView3);
             Glide.with(MenuSearch.ct).load(image4).into(imageView4);
         }
+        else if(name.equals("category")){
+            Glide.with(Category_1.ct).load(image).into(imageView1);//클릭 시 가져오는 이미지
+            textView1.setText(title); // 클릭 시 가져오는 타이틀
+            textView2.setText(product_name); // 클릭 시 가져오는 제품 이름
+            textView3.setText(product_price);
+            textView4.setText(Currency.getInstance(Locale.KOREA).getSymbol());
+            textView5.setText(details);
+            Glide.with(Category_1.ct).load(image2).into(imageView2);
+            Glide.with(Category_1.ct).load(image3).into(imageView3);
+            Glide.with(Category_1.ct).load(image4).into(imageView4);
+        }
         else{
             Glide.with(Home.context).load(image).into(imageView1);//클릭 시 가져오는 이미지
             textView1.setText(title); // 클릭 시 가져오는 타이틀

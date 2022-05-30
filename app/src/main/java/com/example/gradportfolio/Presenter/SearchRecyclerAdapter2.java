@@ -1,10 +1,8 @@
 package com.example.gradportfolio.Presenter;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -13,13 +11,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.gradportfolio.Model.Category_1;
+import com.example.gradportfolio.View.Category_1;
 import com.example.gradportfolio.Model.MenuList;
 import com.example.gradportfolio.R;
 import com.example.gradportfolio.View.MenuSearch;
-import com.example.gradportfolio.View.ProductDetail;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class SearchRecyclerAdapter2 extends RecyclerView.Adapter<SearchRecyclerAdapter2.ViewHolder> { //카테고리 부분 리사이클러뷰

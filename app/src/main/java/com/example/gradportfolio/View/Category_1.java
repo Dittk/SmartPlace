@@ -1,4 +1,4 @@
-package com.example.gradportfolio.Model;
+package com.example.gradportfolio.View;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.gradportfolio.Model.CategoryData;
 import com.example.gradportfolio.Presenter.CategoryRecyclerAdapter;
 import com.example.gradportfolio.R;
 import com.example.gradportfolio.View.MainActivity;
