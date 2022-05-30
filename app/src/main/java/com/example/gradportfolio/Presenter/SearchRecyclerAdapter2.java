@@ -22,7 +22,7 @@ import com.example.gradportfolio.View.ProductDetail;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class SearchRecyclerAdapter2 extends RecyclerView.Adapter<SearchRecyclerAdapter2.ViewHolder> {
+public class SearchRecyclerAdapter2 extends RecyclerView.Adapter<SearchRecyclerAdapter2.ViewHolder> { //카테고리 부분 리사이클러뷰
    ArrayList<MenuList> mList;
    MenuSearch activity2;
    private Intent intent;

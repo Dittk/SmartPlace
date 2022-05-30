@@ -21,7 +21,7 @@ import com.example.gradportfolio.View.ShoppingBasket;
 
 import java.util.ArrayList;
 
-public class SearchRecyclerAdapter extends RecyclerView.Adapter<SearchRecyclerAdapter.ViewHolder> {
+public class SearchRecyclerAdapter extends RecyclerView.Adapter<SearchRecyclerAdapter.ViewHolder> { //하단 모든 제품 리사이클러뷰
     ArrayList<SearchData> productItemArrayList;
     MenuSearch activity;
     private Intent intent;

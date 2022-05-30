@@ -18,6 +18,7 @@ import com.example.gradportfolio.Model.SearchData;
 import com.example.gradportfolio.R;
 import com.example.gradportfolio.View.MenuSearch;
 import com.example.gradportfolio.View.ProductDetail;
+import com.example.gradportfolio.View.ProductDetail2;
 
 import java.util.ArrayList;
 
@@ -29,8 +30,6 @@ public class  CategoryRecyclerAdapter extends RecyclerView.Adapter<CategoryRecyc
         this.productItemArrayList = productItemArrayList;
         this.activity = activity;
     }
-
-
 
     @NonNull
     @Override
@@ -46,18 +45,24 @@ public class  CategoryRecyclerAdapter extends RecyclerView.Adapter<CategoryRecyc
         holder.productName.setText(productItemArrayList.get(position).getProductName());
         holder.productPrice.setText(productItemArrayList.get(position).getProduct_price());
         holder.productTitle.setText(productItemArrayList.get(position).getBrand_title());
-        Glide.with(MenuSearch.ct).load(productItemArrayList.get(position).getImageUrl()).into(holder.image1);
+        Glide.with(Category_1.ct.getApplicationContext()).load(productItemArrayList.get(position).getImageUrl()).into(holder.image1);
 
         holder.image1.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
-         intent = new Intent(v.getContext(), ProductDetail.class);
-          intent.putExtra("number" ,position);
-        intent.putExtra("title", productItemArrayList.get(position).getBrand_title());
-        intent.putExtra("image",productItemArrayList.get(position).getImageUrl());
-        intent.putExtra("product_name", productItemArrayList.get(position).getProductName());
-        intent.putExtra("price",productItemArrayList.get(position).getProduct_price());
-        v.getContext().startActivity(intent);
+             intent = new Intent(v.getContext(), ProductDetail.class);
+             intent.putExtra("number" ,position);
+             intent.putExtra("title", productItemArrayList.get(position).getBrand_title());
+             intent.putExtra("image",productItemArrayList.get(position).getImageUrl());
+             intent.putExtra("product_name", productItemArrayList.get(position).getProductName());
+             intent.putExtra("price",productItemArrayList.get(position).getProduct_price());
+             intent.putExtra("details",productItemArrayList.get(position).getDetails());
+             intent.putExtra("image2",productItemArrayList.get(position).getImageUrl2());
+             intent.putExtra("image3",productItemArrayList.get(position).getImageUrl3());
+             intent.putExtra("image4",productItemArrayList.get(position).getImageUrl4());
+             intent.putExtra("purchase",productItemArrayList.get(position).getPurchaseUrl());
+             intent.putExtra("name","search");
+             v.getContext().startActivity(intent);
             }
               });
 

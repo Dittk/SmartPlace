@@ -1,8 +1,11 @@
 package com.example.gradportfolio.Model;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -19,6 +22,8 @@ public class Category_1 extends AppCompatActivity {
     private  int number;
     private String img_name;
     private TextView textView1;
+    public static Context  ct;
+
 
 
 
@@ -28,6 +33,8 @@ public class Category_1 extends AppCompatActivity {
         intent = getIntent();
         number = intent.getIntExtra("number", -1);
         img_name = intent.getStringExtra("img_name");
+        ct = getApplicationContext();
+
 
         RecyclerView recyclerView = findViewById(R.id.category_recyclerview);
         ArrayList<CategoryData> productItemArrayList = new ArrayList<>();
@@ -52,11 +59,22 @@ public class Category_1 extends AppCompatActivity {
 
 
 
-                productItemArrayList.add(new CategoryData(MainActivity.productList.get(0).getProduct_name(),MainActivity.productList.get(0).getBrand_name(), MainActivity.productList.get(0).getPrice(),MainActivity.productList.get(0).getUrl()));
-                productItemArrayList.add(new CategoryData(MainActivity.productList.get(1).getProduct_name(),MainActivity.productList.get(1).getBrand_name(), MainActivity.productList.get(1).getPrice(),MainActivity.productList.get(1).getUrl()));
-                productItemArrayList.add(new CategoryData(MainActivity.productList.get(2).getProduct_name(),MainActivity.productList.get(2).getBrand_name(), MainActivity.productList.get(2).getPrice(),MainActivity.productList.get(2).getUrl()));
-                productItemArrayList.add(new CategoryData(MainActivity.productList.get(3).getProduct_name(),MainActivity.productList.get(3).getBrand_name(), MainActivity.productList.get(3).getPrice(),MainActivity.productList.get(3).getUrl()));
+//                productItemArrayList.add(new CategoryData(MainActivity.productList.get(0).getProduct_name(),MainActivity.productList.get(0).getBrand_name(), MainActivity.productList.get(0).getPrice(),MainActivity.productList.get(0).getUrl()));
+//                productItemArrayList.add(new CategoryData(MainActivity.productList.get(1).getProduct_name(),MainActivity.productList.get(1).getBrand_name(), MainActivity.productList.get(1).getPrice(),MainActivity.productList.get(1).getUrl()));
+//                productItemArrayList.add(new CategoryData(MainActivity.productList.get(2).getProduct_name(),MainActivity.productList.get(2).getBrand_name(), MainActivity.productList.get(2).getPrice(),MainActivity.productList.get(2).getUrl()));
+//                productItemArrayList.add(new CategoryData(MainActivity.productList.get(3).getProduct_name(),MainActivity.productList.get(3).getBrand_name(), MainActivity.productList.get(3).getPrice(),MainActivity.productList.get(3).getUrl()));
+                if(MainActivity.productList.size() != 0) {
+                    try {
+                        for (int i = 0; i < MainActivity.productList.size(); i++) {
+                            productItemArrayList.add(new CategoryData(MainActivity.productList.get(i).getProduct_name(), MainActivity.productList.get(i).getBrand_name(), MainActivity.productList.get(i).getPrice(), MainActivity.productList.get(i).getUrl(),
+                                    MainActivity.productList.get(i).getDetails(), MainActivity.productList.get(i).getUrl2(),
+                                    MainActivity.productList.get(i).getUrl3(), MainActivity.productList.get(i).getUrl4(), MainActivity.productList.get(i).getPurchaseUrl()));
+                        }
 
+                    } catch (Exception e) {
+                        Log.v("error", "로딩 오류");
+                    }
+                }
 
 
                 break;
