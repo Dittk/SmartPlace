@@ -83,6 +83,18 @@ public class Category_1 extends AppCompatActivity {
 
             case 1: // 침대
                 textView1.setText(img_name);
+                if(MainActivity.productList.size() != 0) {
+                    try {
+                        for (int i = 0; i < MainActivity.productList.size(); i++) {
+                            productItemArrayList.add(new CategoryData(MainActivity.productList.get(i).getProduct_name(), MainActivity.productList.get(i).getBrand_name(), MainActivity.productList.get(i).getPrice(), MainActivity.productList.get(i).getUrl(),
+                                    MainActivity.productList.get(i).getDetails(), MainActivity.productList.get(i).getUrl2(),
+                                    MainActivity.productList.get(i).getUrl3(), MainActivity.productList.get(i).getUrl4(), MainActivity.productList.get(i).getPurchaseUrl()));
+                        }
+
+                    } catch (Exception e) {
+                        Log.v("error", "로딩 오류");
+                    }
+                }
 
 
 
@@ -95,6 +107,18 @@ public class Category_1 extends AppCompatActivity {
 //                productItemArrayList.add(new CategoryData("예시 1","예시 1","예시 1",R.drawable.char4));
 //                productItemArrayList.add(new CategoryData("예시 1","예시 1","예시 1",R.drawable.char3));
 //                productItemArrayList.add(new CategoryData("예시 1","예시 1","예시 1",R.drawable.chair1));
+                if(MainActivity.productList.size() != 0) {
+                    try {
+                        for (int i = 0; i < MainActivity.productList.size(); i++) {
+                            productItemArrayList.add(new CategoryData(MainActivity.productList.get(i).getProduct_name(), MainActivity.productList.get(i).getBrand_name(), MainActivity.productList.get(i).getPrice(), MainActivity.productList.get(i).getUrl(),
+                                    MainActivity.productList.get(i).getDetails(), MainActivity.productList.get(i).getUrl2(),
+                                    MainActivity.productList.get(i).getUrl3(), MainActivity.productList.get(i).getUrl4(), MainActivity.productList.get(i).getPurchaseUrl()));
+                        }
+
+                    } catch (Exception e) {
+                        Log.v("error", "로딩 오류");
+                    }
+                }
 
 
 
@@ -102,11 +126,35 @@ public class Category_1 extends AppCompatActivity {
 
             case 3: // 책상
                 textView1.setText(img_name);
+                if(MainActivity.productList.size() != 0) {
+                    try {
+                        for (int i = 0; i < MainActivity.productList.size(); i++) {
+                            productItemArrayList.add(new CategoryData(MainActivity.productList.get(i).getProduct_name(), MainActivity.productList.get(i).getBrand_name(), MainActivity.productList.get(i).getPrice(), MainActivity.productList.get(i).getUrl(),
+                                    MainActivity.productList.get(i).getDetails(), MainActivity.productList.get(i).getUrl2(),
+                                    MainActivity.productList.get(i).getUrl3(), MainActivity.productList.get(i).getUrl4(), MainActivity.productList.get(i).getPurchaseUrl()));
+                        }
+
+                    } catch (Exception e) {
+                        Log.v("error", "로딩 오류");
+                    }
+                }
 
                 break;
 
             case 4: // 가구 5
                 textView1.setText(img_name);
+                if(MainActivity.productList.size() != 0) {
+                    try {
+                        for (int i = 0; i < MainActivity.productList.size(); i++) {
+                            productItemArrayList.add(new CategoryData(MainActivity.productList.get(i).getProduct_name(), MainActivity.productList.get(i).getBrand_name(), MainActivity.productList.get(i).getPrice(), MainActivity.productList.get(i).getUrl(),
+                                    MainActivity.productList.get(i).getDetails(), MainActivity.productList.get(i).getUrl2(),
+                                    MainActivity.productList.get(i).getUrl3(), MainActivity.productList.get(i).getUrl4(), MainActivity.productList.get(i).getPurchaseUrl()));
+                        }
+
+                    } catch (Exception e) {
+                        Log.v("error", "로딩 오류");
+                    }
+                }
                 break;
 
         }
