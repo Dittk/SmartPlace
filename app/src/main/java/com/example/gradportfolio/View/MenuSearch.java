@@ -71,11 +71,11 @@ public class MenuSearch extends Fragment {
         recyclerView2.setLayoutManager(linearLayoutManager2);
         recyclerView2.setAdapter(searchRecyclerAdapter2);
 
-        mList.add(new MenuList("욕조", R.drawable.menu_bath));
-        mList.add(new MenuList("침대", R.drawable.menu_bed));
-        mList.add(new MenuList("의자", R.drawable.menu_chair));
-        mList.add(new MenuList("책상", R.drawable.menu_table));
-        mList.add(new MenuList("가구 5",R.drawable.image_furniture));
+        mList.add(new MenuList("욕조", R.drawable.bath));
+        mList.add(new MenuList("침대", R.drawable.bed));
+        mList.add(new MenuList("의자", R.drawable.chair));
+        mList.add(new MenuList("책상", R.drawable.desktop));
+        mList.add(new MenuList("책장",R.drawable.bookcase));
 
 
         searchRecyclerAdapter2.notifyDataSetChanged();
